@@ -207,24 +207,36 @@ export default function App() {
   return (
     <>
       <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@300;400;700&display=swap');
+
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-          font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-          background: #111;
-          color: #f0f0f0;
+          font-family: 'Lato', 'Segoe UI', sans-serif;
+          background: #f2ece3;
+          color: #1e3a1e;
           min-height: 100vh;
         }
 
+        /* ---- ITALIAN FLAG STRIP (top) ---- */
+        .flag-strip {
+          display: flex;
+          height: 6px;
+          width: 100%;
+        }
+        .flag-green { background: #007A3D; flex: 1; }
+        .flag-white { background: #fff; flex: 1; }
+        .flag-red { background: #ce2b37; flex: 1; }
+
         /* ---- HEADER ---- */
         .site-header {
-          background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
-          border-bottom: 2px solid #c5a059;
+          background: #f2ece3;
+          border-bottom: 2px solid #007A3D;
           padding: 0 1rem;
           position: sticky;
           top: 0;
           z-index: 100;
-          box-shadow: 0 2px 20px rgba(0,0,0,0.6);
+          box-shadow: 0 2px 12px rgba(0,0,0,0.10);
         }
 
         .header-inner {
@@ -250,27 +262,29 @@ export default function App() {
         }
 
         .badge-prosciutto {
-          font-size: 0.65rem;
+          font-size: 0.7rem;
           font-weight: 800;
-          color: #c5a059;
+          color: #007A3D;
           letter-spacing: 2px;
           text-transform: uppercase;
+          font-family: 'Playfair Display', serif;
         }
 
         .badge-stefanelli {
-          background: #cc2b2b;
+          background: #ce2b37;
           color: white;
-          font-size: 0.8rem;
+          font-size: 0.78rem;
           font-weight: 800;
-          padding: 0.15rem 0.6rem;
+          padding: 0.15rem 0.65rem;
           border-radius: 3px;
           letter-spacing: 1px;
           text-transform: uppercase;
+          font-family: 'Playfair Display', serif;
         }
 
         .logo-trattoria {
           font-size: 0.55rem;
-          color: #aaa;
+          color: #6b8f6b;
           letter-spacing: 3px;
           text-transform: uppercase;
         }
@@ -278,28 +292,18 @@ export default function App() {
         .header-notice {
           text-align: right;
           font-size: 0.62rem;
-          color: #bbb;
-          line-height: 1.5;
+          color: #5a7a5a;
+          line-height: 1.6;
         }
 
         .header-notice strong {
-          color: #c5a059;
+          color: #007A3D;
+          font-weight: 700;
         }
-
-        /* ---- ITALIAN FLAG STRIP ---- */
-        .flag-strip {
-          display: flex;
-          height: 4px;
-          width: 100%;
-        }
-        .flag-green { background: #009246; flex: 1; }
-        .flag-white { background: #fff; flex: 1; }
-        .flag-red { background: #ce2b37; flex: 1; }
 
         /* ---- NAV TABS ---- */
         .nav-container {
-          background: #1a1a1a;
-          border-bottom: 1px solid #333;
+          background: #007A3D;
           overflow-x: auto;
           scrollbar-width: none;
           -ms-overflow-style: none;
@@ -317,26 +321,28 @@ export default function App() {
         .nav-btn {
           background: none;
           border: none;
-          color: #999;
-          padding: 0.65rem 0.85rem;
-          font-size: 0.72rem;
-          font-weight: 600;
+          color: rgba(255,255,255,0.75);
+          padding: 0.65rem 0.9rem;
+          font-size: 0.68rem;
+          font-weight: 700;
           letter-spacing: 0.5px;
           cursor: pointer;
           white-space: nowrap;
-          border-bottom: 2px solid transparent;
+          border-bottom: 3px solid transparent;
           transition: all 0.2s;
           text-transform: uppercase;
+          font-family: 'Lato', sans-serif;
         }
 
         .nav-btn:hover {
-          color: #c5a059;
-          background: rgba(197,160,89,0.05);
+          color: #fff;
+          background: rgba(255,255,255,0.1);
         }
 
         .nav-btn.active {
-          color: #c5a059;
-          border-bottom-color: #c5a059;
+          color: #fff;
+          border-bottom-color: #fff;
+          background: rgba(255,255,255,0.12);
         }
 
         /* ---- MAIN CONTENT ---- */
@@ -349,10 +355,11 @@ export default function App() {
         /* ---- SECTION ---- */
         .section {
           margin-bottom: 2rem;
-          background: #1a1a1a;
+          background: #faf6f0;
           border-radius: 10px;
           overflow: hidden;
-          border: 1px solid #2a2a2a;
+          border: 1px solid #d9cfc3;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
 
         .section-header {
@@ -360,18 +367,19 @@ export default function App() {
           align-items: center;
           gap: 0.6rem;
           padding: 0.9rem 1.2rem;
-          background: linear-gradient(90deg, #1f1a10, #1a1a1a);
-          border-bottom: 1px solid #c5a059;
+          background: #007A3D;
+          border-bottom: none;
         }
 
         .section-icon { font-size: 1.1rem; }
 
         .section-title {
-          font-size: 0.8rem;
-          font-weight: 700;
-          color: #c5a059;
+          font-size: 0.82rem;
+          font-weight: 800;
+          color: #fff;
           text-transform: uppercase;
-          letter-spacing: 2px;
+          letter-spacing: 2.5px;
+          font-family: 'Lato', sans-serif;
         }
 
         .section-items {
@@ -383,8 +391,8 @@ export default function App() {
           display: flex;
           align-items: flex-start;
           justify-content: space-between;
-          padding: 0.75rem 1.2rem;
-          border-bottom: 1px solid #222;
+          padding: 0.78rem 1.2rem;
+          border-bottom: 1px solid #e8e0d4;
           gap: 1rem;
           transition: background 0.15s;
         }
@@ -392,32 +400,32 @@ export default function App() {
         .menu-item:last-child { border-bottom: none; }
 
         .menu-item:hover {
-          background: rgba(197,160,89,0.05);
+          background: #f0e8dc;
         }
 
         .item-info { flex: 1; }
 
         .item-nombre {
-          font-size: 0.9rem;
-          font-weight: 600;
-          color: #f0f0f0;
+          font-size: 0.92rem;
+          font-weight: 700;
+          color: #1e3a1e;
           margin-bottom: 0.2rem;
         }
 
         .item-desc {
           font-size: 0.78rem;
-          color: #888;
+          color: #6b7c6b;
           line-height: 1.4;
-          font-weight: 300;
+          font-weight: 400;
         }
 
         .item-badge {
           display: inline-block;
           margin-top: 0.25rem;
-          font-size: 0.65rem;
+          font-size: 0.62rem;
           font-weight: 700;
-          color: #1a1a1a;
-          background: #c5a059;
+          color: #fff;
+          background: #007A3D;
           padding: 0.1rem 0.5rem;
           border-radius: 3px;
           text-transform: uppercase;
@@ -428,7 +436,7 @@ export default function App() {
           display: inline-block;
           margin-top: 0.25rem;
           font-size: 0.7rem;
-          color: #e8a000;
+          color: #b05a00;
           font-style: italic;
         }
 
@@ -436,31 +444,33 @@ export default function App() {
           display: inline-block;
           margin-top: 0.25rem;
           font-size: 0.7rem;
-          color: #888;
+          color: #8a9a8a;
           font-style: italic;
         }
 
         .item-precio {
-          font-size: 1rem;
-          font-weight: 700;
-          color: #c5a059;
+          font-size: 1.05rem;
+          font-weight: 800;
+          color: #ce2b37;
           white-space: nowrap;
-          min-width: 3.5rem;
+          min-width: 2.5rem;
           text-align: right;
           flex-shrink: 0;
+          font-family: 'Playfair Display', serif;
         }
 
         /* ---- FOOTER ---- */
         .site-footer {
           text-align: center;
           padding: 2rem 1rem;
-          color: #555;
+          color: #8a9a8a;
           font-size: 0.75rem;
-          border-top: 1px solid #222;
+          border-top: 2px solid #007A3D;
           margin-top: 1rem;
+          background: #f2ece3;
         }
 
-        .site-footer strong { color: #c5a059; }
+        .site-footer strong { color: #007A3D; }
 
         /* ---- RESPONSIVE ---- */
         @media (max-width: 480px) {
