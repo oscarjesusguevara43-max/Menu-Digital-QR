@@ -459,6 +459,59 @@ export default function App() {
           font-family: 'Playfair Display', serif;
         }
 
+        /* ---- PIZZA HERO ---- */
+        .pizza-hero {
+          position: relative;
+          width: 100%;
+          height: 260px;
+          overflow: hidden;
+        }
+
+        .pizza-hero-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center 30%;
+          display: block;
+        }
+
+        .pizza-hero-overlay {
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.1) 60%, transparent 100%);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 0 2rem;
+        }
+
+        .pizza-hero-title {
+          font-family: 'Playfair Display', serif;
+          font-size: 2.8rem;
+          font-weight: 800;
+          color: #fff;
+          line-height: 1;
+          letter-spacing: 2px;
+          text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+        }
+
+        .pizza-hero-sub {
+          font-family: 'Playfair Display', serif;
+          font-size: 1rem;
+          font-weight: 700;
+          color: #f5d58a;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+          margin-top: 0.4rem;
+          text-shadow: 0 1px 6px rgba(0,0,0,0.4);
+        }
+
+        @media (max-width: 480px) {
+          .pizza-hero { height: 200px; }
+          .pizza-hero-title { font-size: 2rem; }
+          .pizza-hero-overlay { padding: 0 1.2rem; }
+        }
+
         /* ---- FOOTER ---- */
         .site-footer {
           text-align: center;
@@ -541,6 +594,14 @@ export default function App() {
         </div>
       </nav>
 
+      <div className="pizza-hero">
+        <img src={`${import.meta.env.BASE_URL}pizza-hero.jpg`} alt="Pizza Stefanelli" className="pizza-hero-img" />
+        <div className="pizza-hero-overlay">
+          <span className="pizza-hero-title">Benvenuti</span>
+          <span className="pizza-hero-sub">Stefanelli Trattoria</span>
+        </div>
+      </div>
+
       <main className="main">
         {displayedCategories.map((c) => (
           <Section key={c.key} catKey={c.key} label={c.label} icon={c.icon} />
@@ -549,7 +610,7 @@ export default function App() {
 
       <footer className="site-footer">
         <p className="footer-tagline"><em>Fatto con Amore</em></p>
-        <p className="footer-welcome">La nostra casa è la vostra casa</p>
+        <p className="footer-welcome">Our home is your home</p>
       </footer>
     </>
   );
