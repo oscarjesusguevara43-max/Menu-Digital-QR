@@ -4,7 +4,7 @@ const menuData = {
   entradas: [
     { id: 1, nombre: "Bruschetta", desc: "Pan gratinado con Salsa Napoli + Pesto + Queso Mozzarella", precio: 3 },
     { id: 2, nombre: "Caldo de Res con Pasta", desc: "Pasta en Beodo", precio: 3 },
-    { id: 3, nombre: "Carpaccio de res", desc: "Finas Lonjas de Carne + Aderezo + Aceite de Oliva + Queso", precio: 8 },
+    { id: 3, nombre: "Carpaccio de res", desc: "Finas Lonjas de Carne + Aderezo + Aceite de Oliva + Queso", precio: 8, recomendado: true },
     { id: 4, nombre: "Crema de Auyama", desc: "Con extra de queso +5", precio: 4, nota: "extra queso +5" },
     { id: 5, nombre: "Ensalada Capresssa", desc: "Tomates + Mozzarella + Pesto de Albahaca", precio: 7 },
     { id: 6, nombre: "Ensalada César Clásica", desc: "Lechuga + Aderezo + Croutons + Tocineta Crocante", precio: 8 },
@@ -15,7 +15,7 @@ const menuData = {
   ],
   proteinas: [
     { id: 11, nombre: "Asado Negro", desc: "Nuestro Tradicional y Delicioso Asado Negro", precio: 8 },
-    { id: 12, nombre: "Camarones", desc: "Preparados con ajo + mantequilla + un toque de celery", precio: 10 },
+    { id: 12, nombre: "Camarones", desc: "Preparados con ajo + mantequilla + un toque de celery", precio: 10, recomendado: true },
     { id: 13, nombre: "Lomito", desc: "Tiras de Lomito sazonadas con ajo + sal + pimienta", precio: 5 },
     { id: 14, nombre: "Pollo", desc: "Pechuga de pollo fileteada sazonada con ajo + sal + pimienta", precio: 4 },
     { id: 15, nombre: "Albóndigas de carne", desc: "Sazonadas con ajo + perejil + sal + pimienta", precio: 5 },
@@ -30,13 +30,13 @@ const menuData = {
   ],
   pastasSalsasBlancas: [
     { id: 22, nombre: "Alfredo", desc: "Crema de leche + jamón en cubos", precio: 11 },
-    { id: 23, nombre: "Carbonara", desc: "Mantequilla + Queso Pecorino + Crema de leche + Ajo + Tocineta", precio: 12 },
+    { id: 23, nombre: "Carbonara", desc: "Mantequilla + Queso Pecorino + Crema de leche + Ajo + Tocineta", precio: 12, recomendado: true },
     { id: 24, nombre: "Primavera", desc: "Crema de leche + Celery + Maíz + Guisantes + Jamón", precio: 11 },
     { id: 25, nombre: "Pasta al Pesto de Albahaca", desc: "Preguntar Disponibilidad", precio: 13, disponibilidad: true },
   ],
   otras: [
     { id: 26, nombre: "Pasta con Asado Negro Tradicional", desc: "", precio: null },
-    { id: 27, nombre: "Pasta con Camarones al Ajillo", desc: "Camarones + Mantequilla + Ajo + Perejil", precio: 18 },
+    { id: 27, nombre: "Pasta con Camarones al Ajillo", desc: "Camarones + Mantequilla + Ajo + Perejil", precio: 18, recomendado: true },
   ],
   pastas: [
     { id: 28, nombre: "Fetuccini (Larga)", desc: "Costo incluido en la salsa de tu preferencia.", precio: 0 },
@@ -49,10 +49,10 @@ const menuData = {
   ],
   arrozTipo: [
     { id: 33, nombre: "Risotto Base", desc: "Ajo + Cebolla + Mantequilla + Crema de leche + Queso + Vino", precio: 8 },
-    { id: 34, nombre: "Risotto Champiñones", desc: "Risotto Base + Champiñones", precio: 13 },
+    { id: 34, nombre: "Risotto Champiñones", desc: "Risotto Base + Champiñones", precio: 13, recomendado: true },
   ],
   pasticho: [
-    { id: 35, nombre: "Pasticho", desc: "Cerca de 600 gramos de delicados sabores. Pasta fresca al huevo rellena con nuestra exclusiva salsa bolognesa, suave salsa bechamel, jamón y queso. Finalmente gratinado con una capa de queso pecorino", precio: 12 },
+    { id: 35, nombre: "Pasticho", desc: "Cerca de 600 gramos de delicados sabores. Pasta fresca al huevo rellena con nuestra exclusiva salsa bolognesa, suave salsa bechamel, jamón y queso. Finalmente gratinado con una capa de queso pecorino", precio: 12, recomendado: true },
   ],
   menuEjecutivo: [
     { id: 36, nombre: "Menú Ejecutivo 1", desc: "Caldo o crema del día + Panillo Tamaño Regular + Refresco y pan de la casa", precio: 9 },
@@ -98,9 +98,9 @@ const menuData = {
     { id: 66, nombre: "Milenium", desc: "Margarita + Ruedas de Tomates Frescos + Albahaca + A. de Oliva", precio: 10 },
     { id: 67, nombre: "Napolitana", desc: "Margarita + Anchoa", precio: 9 },
     { id: 68, nombre: "Pepperoni", desc: "Margarita + Pepperoni", precio: 9 },
-    { id: 69, nombre: "Prosciutto", desc: "Margarita + prosciutto + champiñones", precio: 14 },
+    { id: 69, nombre: "Prosciutto", desc: "Margarita + prosciutto + champiñones", precio: 14, recomendado: true },
     { id: 70, nombre: "Salchichón", desc: "Margarita + salchichón + aceitunas negras + pimentón", precio: 12 },
-    { id: 71, nombre: "Stefanelli", desc: "Margarita + pepperoni + aceitunas negras + maíz + anchoas + jamón", precio: 15 },
+    { id: 71, nombre: "Stefanelli", desc: "Margarita + pepperoni + aceitunas negras + maíz + anchoas + jamón", precio: 15, recomendado: true },
     { id: 72, nombre: "Vegetales", desc: "Margarita + cebolla + pimentón + champiñones", precio: 8 },
   ],
   extras: [
@@ -154,14 +154,16 @@ type MenuItem = {
   nota?: string;
   disponibilidad?: boolean;
   costoAdicional?: boolean;
+  recomendado?: boolean;
 };
 
 function MenuItemRow({ item }: { item: MenuItem }) {
   return (
-    <div className="menu-item">
+    <div className={`menu-item${item.recomendado ? " recomendado" : ""}`}>
       <div className="item-info">
         <div className="item-nombre">{item.nombre}</div>
         {item.desc && <div className="item-desc">{item.desc}</div>}
+        {item.recomendado && <span className="recomendado-badge">★ Chef recomienda</span>}
         {item.nota && <span className="item-badge">{item.nota}</span>}
         {item.disponibilidad && <span className="item-disponibilidad">⚠ Consultar disponibilidad</span>}
         {item.costoAdicional && <span className="item-adicional">+ Costo adicional</span>}
@@ -207,12 +209,10 @@ export default function App() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@300;400;700&display=swap');
-
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-          font-family: 'Lato', 'Segoe UI', sans-serif;
+          font-family: 'Inter', 'Segoe UI', sans-serif;
           background: #f2ece3;
           color: #1e3a1e;
           min-height: 100vh;
@@ -379,7 +379,7 @@ export default function App() {
           color: #fff;
           text-transform: uppercase;
           letter-spacing: 2.5px;
-          font-family: 'Lato', sans-serif;
+          font-family: 'Inter', sans-serif;
         }
 
         .section-items {
@@ -449,14 +449,41 @@ export default function App() {
         }
 
         .item-precio {
-          font-size: 1.05rem;
-          font-weight: 800;
-          color: #ce2b37;
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: #D4AF37;
           white-space: nowrap;
           min-width: 2.5rem;
           text-align: right;
           flex-shrink: 0;
-          font-family: 'Playfair Display', serif;
+          font-family: 'Inter', sans-serif;
+        }
+
+        /* ---- RECOMMENDED ---- */
+        .menu-item.recomendado {
+          border-left: 4px solid #D4AF37;
+          background: linear-gradient(90deg, rgba(212,175,55,0.08) 0%, transparent 100%);
+          padding-left: calc(1.2rem - 4px);
+        }
+
+        .menu-item.recomendado:hover {
+          background: linear-gradient(90deg, rgba(212,175,55,0.15) 0%, transparent 100%);
+        }
+
+        .recomendado-badge {
+          display: inline-block;
+          margin-top: 0.3rem;
+          font-size: 0.6rem;
+          font-weight: 600;
+          color: #D4AF37;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          font-family: 'Inter', sans-serif;
+        }
+
+        .menu-item:active {
+          transform: scale(0.98);
+          transition: transform 0.2s ease;
         }
 
         /* ---- PIZZA HERO ---- */
@@ -515,7 +542,7 @@ export default function App() {
         /* ---- FOOTER ---- */
         .site-footer {
           text-align: center;
-          padding: 2rem 1rem;
+          padding: 4rem 1rem 5rem;
           color: #8a9a8a;
           font-size: 0.75rem;
           border-top: 2px solid #007A3D;
