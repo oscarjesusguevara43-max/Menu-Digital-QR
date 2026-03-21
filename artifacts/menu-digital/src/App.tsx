@@ -472,6 +472,14 @@ export default function App() {
 
         .site-footer strong { color: #007A3D; }
 
+        .site-footer em {
+          font-style: italic;
+          font-family: 'Playfair Display', serif;
+          font-size: 1.1rem;
+          color: #007A3D;
+          letter-spacing: 1px;
+        }
+
         /* ---- RESPONSIVE ---- */
         @media (max-width: 480px) {
           .header-notice { display: none; }
@@ -490,7 +498,7 @@ export default function App() {
               <span className="badge-prosciutto">PROSCIUTTO</span>
               <span className="badge-stefanelli">STEFANELLI</span>
             </div>
-            <span className="logo-trattoria">Restaurant &amp; Charcutería · Trattoria</span>
+            <span className="logo-trattoria">Restaurant · Trattoria</span>
           </div>
           <div className="header-notice">
             <strong>Nuestros Precios Incluyen el IVA</strong><br />
@@ -531,10 +539,7 @@ export default function App() {
       </main>
 
       <footer className="site-footer">
-        <p>
-          <strong>Stefanelli Trattoria · El Recreo</strong><br />
-          Nuestros precios incluyen el IVA · No cobramos 10% de servicio
-        </p>
+        <p><em>Fatto con Amore</em></p>
       </footer>
     </>
   );
