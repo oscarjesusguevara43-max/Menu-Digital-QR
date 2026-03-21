@@ -1,0 +1,12 @@
+{
+  "buildCommand": "pnpm --filter @workspace/menu-digital run build",
+  "outputDirectory": "artifacts/menu-digital/dist/public",
+  "installCommand": "pnpm install",
+  "framework": null,
+  "env": {
+    "BASE_PATH": "/"
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
