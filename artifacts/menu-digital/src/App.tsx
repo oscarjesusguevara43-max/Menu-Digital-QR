@@ -475,9 +475,18 @@ export default function App() {
         .site-footer em {
           font-style: italic;
           font-family: 'Playfair Display', serif;
-          font-size: 1.1rem;
+          font-size: 1.25rem;
           color: #007A3D;
           letter-spacing: 1px;
+        }
+
+        .footer-welcome {
+          margin-top: 0.4rem;
+          font-size: 0.82rem;
+          color: #ce2b37;
+          font-style: italic;
+          font-family: 'Playfair Display', serif;
+          letter-spacing: 0.5px;
         }
 
         /* ---- RESPONSIVE ---- */
@@ -539,7 +548,8 @@ export default function App() {
       </main>
 
       <footer className="site-footer">
-        <p><em>Fatto con Amore</em></p>
+        <p className="footer-tagline"><em>Fatto con Amore</em></p>
+        <p className="footer-welcome">La nostra casa è la vostra casa</p>
       </footer>
     </>
   );
