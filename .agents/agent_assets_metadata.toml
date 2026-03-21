@@ -6,3 +6,9 @@ id = "EPg56T3A8SZDwnTLHVz8h"
 uri = "file://menu-qr.png"
 type = "image"
 title = "QR Menú Stefanelli Trattoria"
+
+[[outputs]]
+id = "7cVEXOmTkS2YGLSD282uL"
+uri = "file://menu-qr-final.png"
+type = "image"
+title = "QR Menú Stefanelli Trattoria — Vercel"
