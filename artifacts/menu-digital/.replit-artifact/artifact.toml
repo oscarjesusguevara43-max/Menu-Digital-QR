@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Menú Digital - Stefanelli Trattoria"
+version = "1.0.0"
+id = "artifacts/menu-digital"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22097
+
+[services.development]
+run = "pnpm --filter @workspace/menu-digital run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/menu-digital", "run", "build" ]
+publicDir = "artifacts/menu-digital/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22097"
+BASE_PATH = "/"
