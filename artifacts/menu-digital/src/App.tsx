@@ -128,20 +128,20 @@ const menuData = {
 type CategoryKey = keyof typeof menuData;
 
 const categories: { key: CategoryKey; label: string; icon: string }[] = [
-  { key: "entradas", label: "Entradas", icon: "🥗" },
+  { key: "entradas", label: "Entradas", icon: "🥖" },
   { key: "proteinas", label: "Proteínas", icon: "🥩" },
-  { key: "menuEjecutivo", label: "Menú Ejecutivo", icon: "🍽️" },
-  { key: "platosRegulares", label: "Platos Regulares", icon: "🍝" },
+  { key: "menuEjecutivo", label: "Menú Ejecutivo", icon: "📜" },
+  { key: "platosRegulares", label: "Platos Regulares", icon: "🍽️" },
   { key: "pastasSalsasRojas", label: "Pastas Salsas Rojas", icon: "🍅" },
   { key: "pastasSalsasBlancas", label: "Pastas Salsas Blancas", icon: "🧀" },
   { key: "otras", label: "Otras Pastas", icon: "🍜" },
-  { key: "pastas", label: "Tipos de Pasta", icon: "🍝" },
+  { key: "pastas", label: "Tipos de Pasta", icon: "🌾" },
   { key: "pastasRellenas", label: "Pastas Rellenas", icon: "🥟" },
   { key: "arrozTipo", label: "Arroz / Risotto", icon: "🌾" },
   { key: "pasticho", label: "Pasticho", icon: "🫕" },
   { key: "pizzas", label: "Pizzas", icon: "🍕" },
   { key: "extras", label: "Extras", icon: "➕" },
-  { key: "bebidas", label: "Bebidas", icon: "🥤" },
+  { key: "bebidas", label: "Bebidas & Vinos", icon: "🍷" },
   { key: "cafe", label: "Café & Postres", icon: "☕" },
   { key: "postres", label: "Postres", icon: "🍰" },
 ];
@@ -371,7 +371,11 @@ export default function App() {
           border-bottom: none;
         }
 
-        .section-icon { font-size: 1.1rem; }
+        .section-icon {
+          font-size: 1.1rem;
+          filter: sepia(0.5) contrast(1.2);
+          margin-right: 2px;
+        }
 
         .section-title {
           font-size: 0.82rem;
