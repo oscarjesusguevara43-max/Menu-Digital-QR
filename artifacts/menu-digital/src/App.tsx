@@ -185,7 +185,6 @@ function Section({ catKey, label, icon }: { catKey: CategoryKey; label: string; 
   return (
     <div className="section" id={catKey}>
       <div className="section-header">
-        <span className="section-icon">{icon}</span>
         <h2 className="section-title">{label}</h2>
       </div>
       <div className="section-items">
@@ -371,18 +370,12 @@ export default function App() {
           border-bottom: none;
         }
 
-        .section-icon {
-          font-size: 1.1rem;
-          filter: sepia(0.5) contrast(1.2);
-          margin-right: 2px;
-        }
-
         .section-title {
-          font-size: 0.82rem;
-          font-weight: 800;
-          color: #fff;
+          font-size: 0.78rem;
+          font-weight: 700;
+          color: #D4AF37;
           text-transform: uppercase;
-          letter-spacing: 2.5px;
+          letter-spacing: 3px;
           font-family: 'Inter', sans-serif;
         }
 
@@ -619,7 +612,7 @@ export default function App() {
               className={`nav-btn ${activeTab === c.key ? "active" : ""}`}
               onClick={() => setActiveTab(c.key)}
             >
-              {c.icon} {c.label}
+              {c.label}
             </button>
           ))}
         </div>
