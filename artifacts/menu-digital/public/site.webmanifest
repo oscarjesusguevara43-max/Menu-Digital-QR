@@ -1,0 +1,21 @@
+{
+  "name": "Stefanelli Trattoria",
+  "short_name": "Stefanelli",
+  "description": "Menú Digital - Stefanelli Trattoria",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f2ece3",
+  "theme_color": "#007A3D",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
